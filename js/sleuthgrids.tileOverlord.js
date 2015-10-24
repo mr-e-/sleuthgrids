@@ -313,7 +313,6 @@ Sleuthgrids = (function(Sleuthgrids)
 					break;
 				}
 			}
-			console.log(parallelTiles);
 			
 			if (parallelTiles.length)
 			{
