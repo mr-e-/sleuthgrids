@@ -108,7 +108,9 @@ Sleuthgrids = (function(Sleuthgrids)
 				
 				if (numCells == 1 && !arrowDirections.isMiddle)
 				{
-					triggeredTile.tileOverlord.closeTileResizer(triggeredTile, false);
+					triggeredTile.tileOverlord.closeTileResizer(triggeredTile, true);
+					newTilePositions = tileOverlord.previewTile.positions;
+					tileCSS = Sleuthgrids.positionsToCSS(newTilePositions);
 					$triggeredTile.css(tileCSS);
 					triggeredTile.updateInternalTilePositions();
 				}
@@ -311,6 +313,7 @@ Sleuthgrids = (function(Sleuthgrids)
 					break;
 				}
 			}
+			console.log(parallelTiles);
 			
 			if (parallelTiles.length)
 			{
@@ -332,10 +335,10 @@ Sleuthgrids = (function(Sleuthgrids)
 					obj[absKey] = abs;
 					obj[sizeKey] = size;
 					
-					//$loopTile.css(obj);
-					//loopTile.updateInternalTilePositions();
+					$loopTile.css(obj);
+					loopTile.updateInternalTilePositions();
 
-					loopTile.animate(obj, 300);
+					//loopTile.animate(obj, 300);
 
 					
 					
