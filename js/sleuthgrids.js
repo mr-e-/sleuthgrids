@@ -101,8 +101,8 @@ Sleuthgrids = (function(Sleuthgrids)
 	
 
 
-$(window).load(function()
-{
-	Sleuthgrids.init();
-})
+//$(window).load(function()
+//{
+//	Sleuthgrids.init();
+//})
 

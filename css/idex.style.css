@@ -2107,12 +2107,13 @@ body {
 
 .orderbox-order-button {
 	width:100%;
-	height: 18px;
+	height: 50px;
 	position:relative;
+	display: table;
 	left:50%;
 	top:50%;
 	transform:translateY(-50%) translateX(-50%);
-	font-size:12px;
+	font-size:24px;
 	text-align:center;
 	color:#cccccc;
 	border:1px solid black;
@@ -2379,8 +2380,17 @@ body {
 }
 
 .cm-openorders-content {
-	height:calc(100% - 25px);
+	height:calc(50% - 25px);
 	width:100%;
+	position:relative;
+	display:block;
+	background-color:black;
+}
+
+.cm-players-content {
+	height:calc(50% - 25px);
+	width:100%;
+	margin-top: 20px;
 	position:relative;
 	display:block;
 	background-color:black;
