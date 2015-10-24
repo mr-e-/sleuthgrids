@@ -1,0 +1,354 @@
+
+
+
+<html lang="en">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="css/sleuthgrids.style.css">
+	<link rel="stylesheet" href="css/idex.style.css">
+
+	<title>Sleuthgrids</title>
+	
+</head>
+
+
+<body>
+
+
+<div id="content_wrap" class="unselectable">
+	
+
+	<!------------------------- START HEADER ----------------------------->
+	
+	<div class="mainHeader" class="unselectable">
+
+
+		<div class="mainHeader-grid-icons active">
+			<div class="mainHeader-grid-ico-section">
+				<div class="mainHeader-grid-ico-wrap grid-trig grid-trig-watchlist tooltip" title="favorite" data-grid="watchlist">
+					<img class="vert-align mainHeader-grid-ico-watchlist" src="img/favorite.png"></img>
+				</div>
+				<div class="mainHeader-grid-ico-wrap grid-trig" data-grid="chart">
+					<img class="vert-align mainHeader-grid-ico-chart" src="img/amount.png"></img>
+				</div>
+				<div class="mainHeader-grid-ico-wrap grid-trig grid-trig-orderbook" data-grid="orderbook">
+					<img class="vert-align mainHeader-grid-ico-orderbook" src="img/clipboard.png"></img>
+				</div>
+				<div class="mainHeader-grid-ico-wrap grid-trig grid-trig-marketHistory" data-grid="marketHistory">
+					<img class="vert-align mainHeader-grid-ico-marketHistory" src="img/notebook.png"></img>
+				</div>
+			</div>
+			<div class="mainHeader-grid-ico-section">
+				<div class="mainHeader-grid-ico-wrap grid-trig grid-trig-orders" data-grid="orders">
+					<img class="vert-align mainHeader-grid-ico-orders" src="img/orders.png"></img>
+				</div>
+				<div class="mainHeader-grid-ico-wrap grid-trig grid-trig-marketHistory" data-grid="trades">
+					<img class="vert-align mainHeader-grid-ico-marketHistory" src="img/history.png"></img>
+				</div>
+				<div class="mainHeader-grid-ico-wrap grid-trig grid-trig-balances" data-grid="balances">
+					<img class="vert-align mainHeader-grid-ico-balances" src="img/wallet.png"></img>
+				</div>
+			</div>
+		
+		</div>
+				
+
+	</div>
+	
+	<!------------------------- END HEADER ----------------------------->
+
+
+	
+	
+	
+	<!------------------------- START ADVANCED MODE ----------------------------->
+	
+	<div class="idex-advanced-wrap active">
+
+		<div class="sleuthgrids-wrap">
+		
+			<div id="tile_add">
+				<div class="tile-add-header">
+					
+				</div>
+				<div class="tile-add-body">
+				
+				</div>
+			</div>
+			
+			<div class="grids" id="grids">
+
+			</div>
+			
+		</div>
+			
+	
+	</div>
+	<!------------------------- END ADVANCED MODE ----------------------------->
+
+	
+	
+	
+	<!------------------------- START FOOTER ----------------------------->
+	
+	<div id="utilArea">
+	
+		<div class="sleuthgrids-gridTabs-wrap">
+		
+			<div class="util-grid-tabs">
+
+			</div>
+			
+			<div class="util-grid-newTab">
+				<div class="util-grid-newTab-title">
+					<span class="vert-align">Add</span>
+				</div>
+			</div>
+		
+		</div>
+		
+		<!--<div class="idex-view-trig">
+			<span>Basic</span>
+		</div>-->
+	
+	</div>
+	
+	<!------------------------- END FOOTER ----------------------------->
+	
+
+		
+
+
+	
+	<!------------------------- START OPEN ORDERS TILE----------------------------->
+
+	<div id="orders_template" class="template grid-trig-template" data-grid="orders">
+	
+		<div class="cm-openorders-wrap">
+		
+			<div class="cm-openorders-header">
+				<div class="nSearch-wrap cm-openorders-search-wrap">
+					<div class="nSearch-input vert-align">
+						<input readonly type="text" value="No market loaded" name="pair" class="skynet-search"></input>
+						<div class="nSearch-input-img">
+							<div class="nSearch-input-img-inner cm-openorders-search-popup-trig">
+								<img src="img/search.png" class="vert-align-horiz-align"></img>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="refresh-wrap cm-orders-refresh-wrap">
+					<img src="img/refresh.png"></img>
+				</div>
+			</div>
+			
+			<div class="cm-openorders-content">
+				<div class="cm-openorders-table-wrap">
+					<table class="cm-openorders-table sortable">
+						<thead>
+							<tr>
+								<th>TYPE</th>
+								<th>PRICE</th>
+								<th>AMOUNT</th>
+								<th>TOTAL</th>
+								<th>EXCHANGE</th>
+								<th>STATUS</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+		</div>
+	
+	</div>
+	
+	<!------------------------- END OPEN ORDERS TILE----------------------------->
+
+	
+	
+	
+	
+	<!------------------------- SLEUTHGRIDS TEMPLATES TEMP----------------------------->
+
+	<div id="grid_template" class="template">
+
+		<div class="grid" data-gridindex="0">
+
+			<div class="grid-arrow grid-arrow-left" data-arrow="left">
+				<img src="img/trileft.png"></img>
+			</div>
+			<div class="grid-arrow grid-arrow-right" data-arrow="right">
+				<img src="img/triright.png"></img>
+			</div>
+			<div class="grid-arrow grid-arrow-top" data-arrow="top">
+				<img src="img/triup.png"></img>
+			</div>
+			<div class="grid-arrow grid-arrow-bottom" data-arrow="bottom">
+				<img src="img/tridown.png"></img>
+			</div>
+			<div class="grid-arrow-middle" data-arrow="middle">
+			</div>
+
+			
+			<div class="tiles">
+			
+			</div>
+			
+
+		</div>
+	</div>
+	
+	
+		
+	<div id="tile_template" class="template">
+		<div class="tile">
+			<div class="tile-arrow-wrap">
+				<div class="tile-arrow tile-arrow-left" data-arrow="left">
+					<img src="img/trileft.png"></img>
+				</div>
+				<div class="tile-arrow tile-arrow-right" data-arrow="right">
+					<img src="img/triright.png"></img>
+				</div>
+				<div class="tile-arrow tile-arrow-top" data-arrow="top">
+					<img src="img/triup.png"></img>
+				</div>
+				<div class="tile-arrow tile-arrow-bottom" data-arrow="bottom">
+					<img src="img/tridown.png"></img>
+				</div>
+				<div class="tile-arrow tile-arrow-middle" data-arrow="middle">
+				</div>
+			</div>
+			
+			<div class="tile-header">
+
+			</div>
+			
+			<div class="tile-cells">
+				<div class="tile-overlay">
+					
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+	
+	
+	<div id="cell_template" class="template">
+		<div class="cell">
+			
+		</div>
+	</div>
+	
+	
+	<div id="tile_header_solo_template" class="template">
+	
+		<div class="tile-header-title-wrap">
+			<span class="tile-header-title vert-align"></span>
+		</div>
+		
+		<div class="tile-header-icons">
+			<div class="tile-header-ico">
+				<img class="tile-header-close vert-align" src="img/close.png"></img>
+			</div>
+		</div>
+		
+		<div class ="tile-header-link">
+			<div class="dropdown-list-wrap tile-header-link-dropdown">
+				<div class="dropdown-outer vert-align">
+					<div class="dropdown">
+						<div class="dropdown-inner">
+							<div class="dropdown-title tile-header-link-title">
+								<span class="vert-align">#</span>
+							</div>
+							<!--<div class="dropdown-img">
+								<img src="img/tridownwhite.png" class="vert-align"></img>
+							</div>-->
+						</div>
+					</div>
+				</div>
+				<div class="dropdown-list">
+					<ul class="active">
+						<li class="active" data-val="-1">#</li>
+						<li class="" data-val="1">1</li>
+						<li data-val="2">2</li>
+						<li data-val="3">3</li>
+						<li data-val="4">4</li>
+						<li data-val="5">5</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	
+	
+	<div id="preview_tile_template" class="template">
+	
+		<div class="preview-tile">
+		
+			<div class="preview-tile-header">
+			</div>
+
+			<div class="preview-tile-content">
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	
+	<div id="util_grid_tab_template" class="template">
+	
+		<div class="util-grid-tab">
+			<div class="util-grid-tab-title">
+				<span class="vert-align">Default</span>
+			</div>
+			<div class="util-grid-tab-icons">
+				<div class="util-grid-tab-ico">
+					<img class="util-grid-tab-close vert-align" src="img/close.png"></img>
+				</div>
+			</div>
+		</div>
+			
+	</div>
+
+	<!------------------------- END SLEUTHGRIDS TEMPLATES TEMP----------------------------->
+
+	
+
+</div>
+
+    <script src="js/3rdparty/jquery-2.1.1.js"></script>
+
+	
+	<script src="js/sleuthgrids.js" type="text/javascript"></script>
+	<script src="js/sleuthgrids.binds.js" type="text/javascript"></script>
+	<script src="js/sleuthgrids.gridOverlord.js" type="text/javascript"></script>
+	<script src="js/sleuthgrids.grid.js" type="text/javascript"></script>
+	<script src="js/sleuthgrids.tileOverlord.js" type="text/javascript"></script>
+	<script src="js/sleuthgrids.tile.js" type="text/javascript"></script>
+	<script src="js/sleuthgrids.cellOverlord.js" type="text/javascript"></script>
+	<script src="js/sleuthgrids.cell.js" type="text/javascript"></script>
+	<script src="js/sleuthgrids.utils.js" type="text/javascript"></script>
+
+
+		
+	
+</body>
+
+
+
+
+</html>

@@ -67,6 +67,7 @@ Sleuthgrids = (function(Sleuthgrids)
 			var cellOverlord = cellNav.cellOverlord;
 			var tile = cellOverlord.tile;
 			
+			
 			cellNav.cellNavDOM.on("mousedown", function(e)
 			{				
 				//var hasCloseClass = $(e.target).hasClass("tile-header-close") || $(e.target).hasClass("tile-header-link");
@@ -88,13 +89,13 @@ Sleuthgrids = (function(Sleuthgrids)
 			})
 			
 			
-			tileNavCell.cellNavDOM.on("mouseup", function(e)
+			cellNav.cellNavDOM.on("mouseup", function(e)
 			{
 				cellNav.isMoving = false;
 			})
 			
 			
-			tileNavCell.cellNavDOM.on("mouseout", function(e)
+			cellNav.cellNavDOM.on("mouseout", function(e)
 			{	
 				if (cellNav.isMoving)
 				{
@@ -106,11 +107,13 @@ Sleuthgrids = (function(Sleuthgrids)
 					Sleuthgrids.isGridTrig = true;
 					Sleuthgrids.triggeredCell = cell;
 					Sleuthgrids.isTriggeredNew = false;
-					tileNavCell.isMoving = false;
+					cellNav.isMoving = false;
+					
+					/*
 					//tile.closeTile(tileNavCell);
 					
-					console.log(e);
-					var gridPositions = Sleuthgrids.getPositions(grid.gridDOM, false);
+					var grid = cellNav.cell.cellOverlord.tile.tileOverlord.grid;
+					var gridPositions = grid.currentGridPositions;
 					var mouseX = e.clientX - gridPositions.left;
 					var mouseY = e.clientY - gridPositions.top;
 
@@ -118,8 +121,9 @@ Sleuthgrids = (function(Sleuthgrids)
 					console.log(mouseX);
 					tile.tileDOM.animate({left:mouseX-150, top:mouseY, width:"300px", height:"250px"}, 400);
 					tile.toggleTileOverlay(true);
-					tile.closeTileResizer();
-				  // tile.tileDOM.animate({}, 400);
+					tile.tileOverlord.closeTileResizer();
+					// tile.tileDOM.animate({}, 400);
+					*/
 				}
 			})
 			
@@ -268,6 +272,7 @@ Sleuthgrids = (function(Sleuthgrids)
 		init: function(cellOverlord, index, cellType)
 		{
 			var cell = this;
+			cellType = "orders";
 			
 			cell.cellOverlord = cellOverlord;			
 			cell.index = index;
@@ -279,7 +284,11 @@ Sleuthgrids = (function(Sleuthgrids)
 			cell.makeCellDOM();
 			
 			cell.cellNav = new Sleuthgrids.CellNav(cell);
-			cell.handler = new Sleuthgrids.cellHandlerClass(cell);
+			//cell.handler = new Sleuthgrids.cellHandlerClass(cell);
+			//cell.handler = new Sleuthgrids.cellHandlers[cellType]();
+			//cell.handler.init(cell)
+			cell.handler = {"call":function(a){return}, "getMarket":function(){return false}};
+
 		},
 		
 		
@@ -437,7 +446,7 @@ Sleuthgrids = (function(Sleuthgrids)
 		
 	}
 		
-		
+
 	
 	return Sleuthgrids;
 	
